@@ -1,5 +1,4 @@
 package SoftwareEngineering_Gradle;
-package SoftwareEngineering;
 
 import java.util.ArrayList;
 
