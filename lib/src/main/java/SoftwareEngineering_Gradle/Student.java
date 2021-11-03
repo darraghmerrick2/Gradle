@@ -15,6 +15,7 @@ public class Student {
 	{
 		this.name = name;
 		this.age = age;
+		setUsername(name, age);
 	}
 	public String getName() {
 		return name;
@@ -40,7 +41,8 @@ public class Student {
 	public void setDOB(String dOB) {
 		DOB = dOB;
 	}
-	public String getUsername(String name, int age) {
+	public String getUsername() {
+		System.out.println(username);
 		return username;
 	}
 	public void setUsername(String name, String age) {

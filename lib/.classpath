@@ -32,6 +32,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="lib" path="D:/Downloads - External/terasoluna-gfw-jodatime-5.7.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/Downloads - External/joda-time-2.10.13.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>

@@ -1,7 +1,6 @@
 package SoftwareEngineering_Gradle;
 
 import java.util.ArrayList;
-
 import org.joda.time.DateTime;
 
 public class Course {
@@ -10,15 +9,12 @@ public class Course {
 	private String courseCode;
 	private ArrayList<Student> enrolledStudents = new ArrayList<>();
 	private ArrayList<Module> modules = new ArrayList<>();
-	
+	private DateTime startDate;
 	
 	public Course(String name, String code)
 	{
 		this.courseCode = code;
 		this.courseName = name;
-		//DateTime(int year, int monthOfYear, int dayOfMonth, int hourOfDay, int minuteOfHour) 
-		DateTime startDate = new DateTime(2021, 9, 1, 0, 0);
-		DateTime endDate = new DateTime(2022, 5, 12, 23 ,59);
 	}
 
 	public String getCourseName() {
