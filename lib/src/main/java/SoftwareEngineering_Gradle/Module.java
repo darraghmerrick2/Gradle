@@ -3,15 +3,18 @@ package SoftwareEngineering_Gradle;
 import java.util.ArrayList;
 
 public class Module {
-	public String moduleName;
-	public String moduleCode;
-	public ArrayList<Student> students = new ArrayList<>();
-	public ArrayList<Course> associatedCourses = new ArrayList<>();
+	private String moduleName;
+	private String moduleCode;
+	private ArrayList<Student> students;
+	private ArrayList<Course> associatedCourses = new ArrayList<>();
 	
 	public Module(String name, String code)
 	{
 		this.moduleName = name;
 		this.moduleCode = code;
+		//Instantiate Lists here so they're unique to each Module instance
+		students = new ArrayList<Student>();
+		associatedCourses = new ArrayList<Course>();
 	}
 
 	public String getModuleName() {
@@ -73,4 +76,13 @@ public class Module {
 			System.out.println(students.get(i));
 		}
 	}
+
+	@Override
+	public String toString() {
+		String str = "Module [moduleName=" + moduleName + ", moduleCode=" + moduleCode + ", students=" + students
+				+ ", associatedCourses=" + associatedCourses + "]";
+		return str;
+	}
+	
+	
 }

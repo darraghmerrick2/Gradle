@@ -1,21 +1,29 @@
 package SoftwareEngineering_Gradle;
 
 import java.util.ArrayList;
+import org.joda.time.DateTime;
 
 public class Student {
 	private String name;
 	private String age;
 	private int id;
-	private String DOB;
+	private DateTime DOB;
 	private String username;
-	private ArrayList<Module> modules = new ArrayList<>();
-	private ArrayList<Course> courses = new ArrayList<>();
+	private ArrayList<Module> modules;
+	private ArrayList<Course> courses;
 
-	public Student(String name, String age)
+	public Student(String name, String age, int id, DateTime DOB)
 	{
 		this.name = name;
 		this.age = age;
+		this.id = id;
+		this.DOB = DOB;
+		//set username each time a student is created i.e each time someone joins the college
 		setUsername(name, age);
+		
+		//Each student needs their own list of modules and courses so declare lists here
+		modules = new ArrayList<Module>();
+		courses = new ArrayList<Course>();
 	}
 	public String getName() {
 		return name;
@@ -35,11 +43,11 @@ public class Student {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getDOB() {
+	public DateTime getDOB() {
 		return DOB;
 	}
-	public void setDOB(String dOB) {
-		DOB = dOB;
+	public void setDOB(DateTime DOB) {
+		this.DOB = DOB;
 	}
 	public String getUsername() {
 		System.out.println(username);
@@ -47,7 +55,6 @@ public class Student {
 	}
 	public void setUsername(String name, String age) {
 		username = name.concat(age);
-		this.username = username;
 	}
 	public ArrayList<Module> getModules() {
 		return modules;
@@ -87,4 +94,12 @@ public class Student {
 			System.out.println(courses.get(i));
 		}
 	}
+	@Override
+	public String toString() {
+		String str = "Student [name=" + name + ", age=" + age + ", id=" + id + ", DOB=" + DOB + ", username=" + username
+				+ ", modules=" + modules + ", courses=" + courses + "]";
+		return str;
+	}
+	
+	
 }
